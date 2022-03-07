@@ -35,8 +35,9 @@ let data = {
   income: [],
   expenses: {},
   savings: false,
-  sumExpenses: Number,
-  sumOptional: Number
+  sumExpenses: 0,
+  sumOptional: 0,
+  budget: 0
 }
 
 //****************************************
@@ -58,8 +59,8 @@ function addCalculationObj (when, what) {
   when.textContent = i + `Сумма расходов: ${sum}`;
 }
 
-function calculatуDayBudget (price) {
-  data.budgetDay = (price - data.sumExpenses - data.sumOptional / 30).toFixed();
+function calculatуDayBudget () {
+  data.budgetDay = ((data.budget - data.sumExpenses - data.sumOptional) / 30).toFixed();
   addCalculation(oneDay, data.budgetDay)
 }
 
@@ -72,13 +73,10 @@ function divideDate (val) {
 function addValueInput () {
   const inputName = document.querySelectorAll('.expenses__input-name');
   const inputPrice = document.querySelectorAll('.expenses__input-price');
-  let sum = 0;
   for (let i = 0; i < inputName.length; i++) {
     data.expenses[inputName[i].value] = inputPrice[i].value;
-    sum += +inputPrice[i].value
     addCalculationObj(mandatorySpending, data.expenses);
   }
-  data.sumOptional = sum;
 }
 
 function addFormInput () {
@@ -140,6 +138,7 @@ expenseBtnOptional.addEventListener('click', () => {
   expenseOptional.forEach((item) => {
     sum += +item.value
   })
+  data.sumOptional = sum
   addCalculation(possibleSpending, sum)
 })
 
@@ -148,9 +147,7 @@ incomeInput.addEventListener('input', () => {
   addCalculation(additionalIncome, data.income)
 })
 
-btnDayBudget.addEventListener('click', () => {
-  calculatуDayBudget(data.budget)
-})
+btnDayBudget.addEventListener('click', calculatуDayBudget)
 
 
 checkbox.addEventListener('click', () => {
