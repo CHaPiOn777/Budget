@@ -1,0 +1,24 @@
+.expenses__input {
+  margin: 0 auto;
+  padding: 15px 0 15px 10px;
+  width: calc((100%/2) - 20px);
+  border: none;
+  filter: drop-shadow(2px 2px 4px rgba(180, 180, 180, 0.281));
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}

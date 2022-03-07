@@ -1,0 +1,9 @@
+.answer {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 10px;
+  filter: drop-shadow(2px 2px 4px rgba(180, 180, 180, 0.281));
+}

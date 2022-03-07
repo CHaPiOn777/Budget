@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ру">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Учет расходов</title>
+</head>
+
+<body class="pages">
+  <h1 class="title">Расчет дневного бюджета</h1>
+  <main class="main">
+
+    <div class="data">
+      <form class="form">
+        <fieldset class="form__expenses">
+          <legend class="expenses">Введите обязательные расходы</legend>
+          <div class="form__expenses-input ">
+            <input type="text" class="expenses__input expenses__input-name" placeholder="Наименование">
+            <input type="text" class="expenses__input expenses__input-price" placeholder="Цена">
+            <button class="btn__delete" type="button"></button>
+          </div>
+          <div class="btn btn-form__expenses-input-required">
+            <button class="expenses__btn expenses__btn-approve" type="button">Утвердить</button>
+            <button class="expenses__btn expenses__btn-add" type="button">+</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <form class="form">
+        <fieldset class="form__expenses">
+          <legend class="expenses">Введите необязательные расходы</legend>
+          <div class="form__expenses-input">
+            <input type="text" class="expenses__input expenses__input-optional">
+            <input type="text" class="expenses__input expenses__input-optional">
+            <input type="text" class="expenses__input expenses__input-optional">
+          </div>
+          <button class="expenses__btn expenses__btn-optional" type="button">Утвердить</button>
+        </fieldset>
+      </form>
+
+      <form class="form">
+        <fieldset class="form__expenses">
+          <legend class="expenses">Расчет дневного бюджета</legend>
+          <button class="expenses__btn expenses__btn-day" type="button">Расчитать</button>
+        </fieldset>
+      </form>
+
+      <form class="form">
+        <fieldset class="form__expenses">
+          <legend class="expenses">Введите статьи возможных доходов через запятую</legend>
+          <div class="form__expenses-input">
+            <input type="text" class="expenses__input expenses__input-possible expenses__input-income" placeholder="Наименование">
+          </div>
+        </fieldset>
+      </form>
+
+      <form class="form">
+        <fieldset class="form__expenses">
+          <div class="form__expenses-input form__expenses-input-chekbox">
+            <label for="accumulation" class="expenses">Есть ли накопления</label>
+            <input id="accumulation" type="checkbox" class="expenses__input expenses__input-chekbox"
+              value="Есть ли накопления">
+          </div>
+          <div class="form__expenses-input">
+            <label for="price" class="expenses expenses__accumulations">Сумма</label>
+            <input type="text" class="expenses__input expenses__input-accumulation" id="price">
+            <label for="procent" class="expenses expenses__accumulations">Процент</label>
+            <input type="text" class="expenses__input expenses__input-accumulation" id="procent">
+          </div>
+          <button class="expenses__btn expenses__btn-start-calculations" type="button">Начать расчет</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <section class="day">
+      <div class="answer">
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Доход:</h2>
+          <div class="expenses expenses-text income"></div>
+        </div>
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Бюджет на 1 день:</h2>
+          <div class="expenses expenses-text one-day"></div>
+        </div>
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Уровень дохода:</h2>
+          <div class="expenses expenses-text income-level" id="income-level"></div>
+        </div>
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Обязательные расходы:</h2>
+          <div class="expenses expenses-text mandatory-spending"></div>
+        </div>
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Возможные траты:</h2>
+          <div class="expenses expenses-text possible-spending"></div>
+        </div>
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Дополнительный доход:</h2>
+          <div class="expenses expenses-text additional-income"></div>
+        </div>
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Накопления за 1 год:</h2>
+          <div class="expenses expenses-text accumulation-for-1-year"></div>
+        </div>
+        <div class="answer-text">
+          <h2 class="expenses expenses-text-h2">Накопления за 1 месяц:</h2>
+          <div class="expenses expenses-text accumulation-for-1-month"></div>
+        </div>
+
+      </div>
+
+
+      <form class="form">
+        <fieldset class="form__expenses year">
+          <div class="form__expenses-input">
+          </div>
+          <div class="form__expenses-input">
+            <label class="expenses" for="year">Год</label>
+            <input type="text" class="expenses__input expenses__input-possible month" id="year">
+            <label class="expenses" for="month">Месяц</label>
+            <input type="text" class="expenses__input expenses__input-possible month" id="month">
+            <label class="expenses" for="day">День</label>
+            <input type="text" class="expenses__input expenses__input-possible month" id="day">
+          </div>
+          <div class="form__expenses-input">
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <template id="form__expenses-input">
+    <div class="form__expenses-input">
+      <input type="text" class="expenses__input expenses__input-name" placeholder="Наименование">
+      <input type="text" class="expenses__input expenses__input-price" placeholder="Цена">
+      <button class="btn__delete" type="button"></button>
+    </div>
+  </template>
+
+  <script src="./js.js"></script>
+</body>
+
+</html>

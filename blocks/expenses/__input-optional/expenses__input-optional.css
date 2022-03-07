@@ -1,0 +1,3 @@
+.expenses__input-optional {
+  width: calc((100%/3) - 20px);
+}

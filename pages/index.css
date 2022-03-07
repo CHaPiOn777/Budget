@@ -1,0 +1,33 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+@import url(../blocks/page/pages.css);
+@import url(../blocks/main/main.css);
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__expenses-input/form__expenses-input.css);
+@import url(../blocks/form/__expensens/form__expenses.css);
+@import url(../blocks/expenses/expenses.css);
+@import url(../blocks/expenses/__btn/expenses__btn.css);
+@import url(../blocks/expenses/__input/expenses__input.css);
+@import url(../blocks/title/title.css);
+@import url(../blocks/form/__expenses-input-chekbox/form__expenses-input-chekbox.css);
+@import url(../blocks/expenses/__input-chekbox/expenses__input-chekbox.css);
+@import url(../blocks/expenses/__btn-start-calculations/expenses__btn-start-calculations.css);
+@import url(../blocks/expenses/__input-optional/expenses__input-optional.css);
+@import url(../blocks/expenses/__input-possible/expenses__input-possible.css);
+@import url(../blocks/expenses/__input-accumulation/expenses__input-accumulation.css);
+@import url(../blocks/expenses/__accumulations/accumulations.css);
+@import url(../blocks/answer/answer.css);
+@import url(../blocks/day/day.css);
+@import url(../blocks/month/month.css);
+@import url(../blocks/year/year.css);
+@import url(../blocks/output/output.css);
+@import url(../blocks/answer-text/answer-text.css);
+@import url(../blocks/expenses-text/expenses-text.css);
+@import url(../blocks/expenses/__btn-add/expenses__btn-add.css);
+@import url(../blocks/btn/btn.css);
+@import url(../blocks/btn/__delete/btn__delete.css);
+@import url(../blocks/expenses-text-h2/expenses-text-h2.css);
+
+
+
